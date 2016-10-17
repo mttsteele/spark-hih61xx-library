@@ -1,16 +1,17 @@
 /*
-Spark Core HIH61XX Temperature/Humidity Sensor Library
+Particle/Photon HIH81XX Temperature/Humidity Sensor Library
 By: Geert wille - Appstrakt
+Updated: Matthew Steele
 Licence: GPL v2
 */
-#ifndef HONEYWELL_HIH61XX_H
-#define HONEYWELL_HIH61XX_H
+#ifndef HONEYWELL_HIH81XX_H
+#define HONEYWELL_HIH81XX_H
 
 #include "application.h"
 
-#define HIH61XX_DEFAULT_ADDRESS     0x27
+#define HIH81XX_DEFAULT_ADDRESS     0x27
 
-class HIH61XX {
+class HIH81XX {
     public:
         enum Error {
             NoError = 0,
