@@ -1,6 +1,6 @@
-HIH61XX Library for Spark Core
+HIH81XX Library for Particle/Photon
 ===================
-Honeywell HumidIconTM Digital Humidity/Temperature Sensors: HIH6130/6131 and 6120/6121 Series is a digital output-type relative humidity (RH) and temperature sensor combined in the same package. The library uses I2C to connect to the sensor (see the Wire library). ***SPI can also be used, but is not implemented in this library***.
+Honeywell HumidIconTM Digital Humidity/Temperature Sensors: HIH8130/8131 and 8120/8121 Series is a digital output-type relative humidity (RH) and temperature sensor combined in the same package. The library uses I2C to connect to the sensor (see the Wire library). ***SPI can also be used, but is not implemented in this library***.
 
 Note
 ----
@@ -10,4 +10,4 @@ This library has been tested, but might still contain bugs, so please be careful
 
 About
 -----
-This project is based on https://code.google.com/p/arduino-hih61xx/ and is part of Tomas's work.
+This project is based on https://code.google.com/p/arduino-hih61xx/.
