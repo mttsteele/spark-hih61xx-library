@@ -1,7 +1,7 @@
 {
-    "name": "HIH61XX",
-    "author": "Geert Wille <geert@appstrakt.com>",
+    "name": "HIH81XX",
+    "author": "Matthew Steele <matthewfsteele@gmail.com",
     "license": "GNU",
     "version": "0.0.1",
-    "description": "A library for using the HIH61XX in your project"
+    "description": "A library for using the HIH81XX in your project"
 }
