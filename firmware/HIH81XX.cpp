@@ -1,13 +1,13 @@
-#include "HIH61XX.h"
+#include "HIH81XX.h"
 
-HIH61XX::HIH61XX(uint8_t address, TwoWire& MyWire, uint8_t powerPin): a(address), p(powerPin), w(MyWire), f(0), h(0), t(0) {
+HIH81XX::HIH81XX(uint8_t address, TwoWire& MyWire, uint8_t powerPin): a(address), p(powerPin), w(MyWire), f(0), h(0), t(0) {
     if (p < 255) {
         digitalWrite(p, LOW);
         pinMode(p, OUTPUT);
     }
 }
 
-uint8_t HIH61XX::start() {
+uint8_t HIH81XX::start() {
     if (p < 255) {
         digitalWrite(p, HIGH);
     }
@@ -15,7 +15,7 @@ uint8_t HIH61XX::start() {
     return setError(0);
 }
 
-uint8_t HIH61XX::stop() {
+uint8_t HIH81XX::stop() {
     if (p < 255) {
         digitalWrite(p, LOW);
     }
@@ -23,7 +23,7 @@ uint8_t HIH61XX::stop() {
     return setError(0);
 }
 
-uint8_t HIH61XX::update() {
+uint8_t HIH81XX::update() {
     if (!isRunning()) {
         return setError(NotRunningError);
     }
@@ -85,14 +85,14 @@ uint8_t HIH61XX::update() {
     }
 }
 
-uint8_t HIH61XX::commandRequest(Stream & stream) {
+uint8_t HIH81XX::commandRequest(Stream & stream) {
     if (stream.available()) {
         return commandProcess(stream, stream.read());
     }
     return commandReply(stream, 255);
 }
 
-uint8_t HIH61XX::commandProcess(Stream & stream, uint8_t command) {
+uint8_t HIH81XX::commandProcess(Stream & stream, uint8_t command) {
     switch (command) {
         //  get humidity
         case 'h':
